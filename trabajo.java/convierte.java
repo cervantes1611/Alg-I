@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ConversorEuroASoles {
+public class convierte {
 
     // Puedes actualizar esta tasa según el tipo de cambio actual
     private static final double TASA_CAMBIO = 4.00; // 1 euro = 4.00 soles (ejemplo)
@@ -22,3 +22,5 @@ public class ConversorEuroASoles {
         scanner.close();
     }
 }
+
+ 
