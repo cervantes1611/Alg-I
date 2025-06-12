@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Multiplicacion {
+    public static void main(String[] args) {
+        // Crear un objeto Scanner para leer desde la entrada estándar
+        Scanner scanner = new Scanner(System.in);
+
+        // Pedir al usuario el primer número
+        System.out.print("Ingresa el primer número: ");
+        double numero1 = scanner.nextDouble();
+
+        // Pedir al usuario el segundo número
+        System.out.print("Ingresa el segundo número: ");
+        double numero2 = scanner.nextDouble();
+
+        // Calcular la multiplicación
+        double resultado = numero1 * numero2;
+
+        // Mostrar el resultado
+        System.out.println("El resultado de la multiplicación es: " + resultado);
+
+        // Cerrar el scanner
+        scanner.close();
+    }
+}
