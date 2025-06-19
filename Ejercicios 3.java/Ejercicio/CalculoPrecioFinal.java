@@ -1,0 +1,73 @@
+package Ejercicio;
+
+ import java.util.Scanner;
+
+public class CalculoPrecioFinal {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Solicitar la base imponible
+        System.out.print("Introduzca la base imponible: ");
+        double baseImponible = scanner.nextDouble();
+        
+        // Solicitar el tipo de impuesto
+        System.out.print("Introduzca el tipo de IMPUESTO (general, reducido o superreducido): ");
+        String tipoImpuesto = scanner.next().toLowerCase();
+        
+        // Solicitar el código promocional
+        System.out.print("Introduzca el código promocional (nopro, mitad, meno5 o 5porc): ");
+        String codigoPromocional = scanner.next().toLowerCase();
+
+        // Variables para el cálculo
+        double tipoImpuestoPorcentaje = 0;
+        switch (tipoImpuesto) {
+            case "general":
+                tipoImpuestoPorcentaje = 0.21;
+                break;
+            case "reducido":
+                tipoImpuestoPorcentaje = 0.10;
+                break;
+            case "superreducido":
+                tipoImpuestoPorcentaje = 0.04;
+                break;
+            default:
+                System.out.println("Tipo de impuesto no válido.");
+                scanner.close();
+                return;
+        }
+
+        // Calcular el impuesto
+        double impuesto = baseImponible * tipoImpuestoPorcentaje;
+        double precioConImpuesto = baseImponible + impuesto;
+
+        // Aplicar el código promocional
+        double descuento = 0;
+        switch (codigoPromocional) {
+            case "mitad":
+                descuento = precioConImpuesto / 2;
+                break;
+            case "meno5":
+                descuento = 5;
+                break;
+            case "5porc":
+                descuento = precioConImpuesto * 0.05;
+                break;
+            case "nopro":
+            default:
+                descuento = 0;
+                break;
+        }
+
+        double total = precioConImpuesto - descuento;
+
+        // Mostrar los resultados
+        System.out.printf("Base imponible\t\t%.2f%n", baseImponible);
+        System.out.printf("IMPUESTO (%.0f%%)\t\t%.2f%n", tipoImpuestoPorcentaje * 100, impuesto);
+        System.out.printf("Precio con IMPUESTO\t%.2f%n", precioConImpuesto);
+        System.out.printf("Cód. promo. (%s): \t\t-%.2f%n", codigoPromocional, descuento);
+        System.out.printf("TOTAL\t\t\t\t%.2f%n", total);
+
+        // Cerrar el scanner
+        scanner.close();
+    }
+}

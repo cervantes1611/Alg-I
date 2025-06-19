@@ -1,6 +1,11 @@
 public class Colores {;z
   public static void main(String[] args) {
     System.out.println("\033[33m manzana]");
+  }
+
+  @Override
+  public String toString() {
+    return "Colores []";
   }  
 }   System.out.println("\033[32m verde");
     System.out.println("\033[31mtomate"); 

@@ -1,0 +1,106 @@
+import java.util.Scanner;
+
+public class Cuestionario {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int puntuacion = 0;
+
+        System.out.println("¡Bienvenido al cuestionario! Responde las siguientes preguntas:");
+
+        // Pregunta 1
+        System.out.println("1. ¿Cuál es la capital de Francia?");
+        System.out.println("a) Berlín");
+        System.out.println("b) Madrid");
+        System.out.println("c) París");
+        System.out.print("Respuesta: ");
+        String respuesta1 = scanner.nextLine();
+        if (respuesta1.equalsIgnoreCase("c")) puntuacion++;
+
+        // Pregunta 2
+        System.out.println("2. ¿Qué es la fotosíntesis?");
+        System.out.println("a) Proceso de reproducción");
+        System.out.println("b) Proceso por el cual las plantas producen su alimento");
+        System.out.println("c) Proceso de respiración");
+        System.out.print("Respuesta: ");
+        String respuesta2 = scanner.nextLine();
+        if (respuesta2.equalsIgnoreCase("b")) puntuacion++;
+
+        // Pregunta 3
+        System.out.println("3. ¿Quién escribió 'Cien años de soledad'?");
+        System.out.println("a) Gabriel García Márquez");
+        System.out.println("b) Julio Cortázar");
+        System.out.println("c) Mario Vargas Llosa");
+        System.out.print("Respuesta: ");
+        String respuesta3 = scanner.nextLine();
+        if (respuesta3.equalsIgnoreCase("a")) puntuacion++;
+
+        // Pregunta 4
+        System.out.println("4. ¿Cuál es el elemento químico con símbolo O?");
+        System.out.println("a) Oro");
+        System.out.println("b) Oxígeno");
+        System.out.println("c) Osmio");
+        System.out.print("Respuesta: ");
+        String respuesta4 = scanner.nextLine();
+        if (respuesta4.equalsIgnoreCase("b")) puntuacion++;
+
+        // Pregunta 5
+        System.out.println("5. ¿Qué planeta es conocido como el 'Planeta Rojo'?");
+        System.out.println("a) Venus");
+        System.out.println("b) Marte");
+        System.out.println("c) Júpiter");
+        System.out.print("Respuesta: ");
+        String respuesta5 = scanner.nextLine();
+        if (respuesta5.equalsIgnoreCase("b")) puntuacion++;
+
+        // Pregunta 6
+        System.out.println("6. ¿Cuál es la fórmula del agua?");
+        System.out.println("a) H2O");
+        System.out.println("b) CO2");
+        System.out.println("c) O2");
+        System.out.print("Respuesta: ");
+        String respuesta6 = scanner.nextLine();
+        if (respuesta6.equalsIgnoreCase("a")) puntuacion++;
+
+        // Pregunta 7
+        System.out.println("7. ¿Quién pintó 'La noche estrellada'?");
+        System.out.println("a) Pablo Picasso");
+        System.out.println("b) Vincent van Gogh");
+        System.out.println("c) Claude Monet");
+        System.out.print("Respuesta: ");
+        String respuesta7 = scanner.nextLine();
+        if (respuesta7.equalsIgnoreCase("b")) puntuacion++;
+
+        // Pregunta 8
+        System.out.println("8. ¿Cuál es la lengua más hablada del mundo?");
+        System.out.println("a) Inglés");
+        System.out.println("b) Chino mandarín");
+        System.out.println("c) Español");
+        System.out.print("Respuesta: ");
+        String respuesta8 = scanner.nextLine();
+        if (respuesta8.equalsIgnoreCase("b")) puntuacion++;
+
+        // Pregunta 9
+        System.out.println("9. ¿Qué es la mitosis?");
+        System.out.println("a) Proceso de división celular");
+        System.out.println("b) Proceso de fotosíntesis");
+        System.out.println("c) Proceso de reproducción sexual");
+        System.out.print("Respuesta: ");
+        String respuesta9 = scanner.nextLine();
+        if (respuesta9.equalsIgnoreCase("a")) puntuacion++;
+
+        // Pregunta 10
+        System.out.println("10. ¿Cuál es el continente más grande?");
+        System.out.println("a) África");
+        System.out.println("b) Asia");
+        System.out.println("c) América");
+        System.out.print("Respuesta: ");
+        String respuesta10 = scanner.nextLine();
+        if (respuesta10.equalsIgnoreCase("b")) puntuacion++;
+
+        // Mostrar el resultado
+        System.out.println("Tu puntuación final es: " + puntuacion + " de 10.");
+
+        // Cerrar el scanner
+        scanner.close();
+    }
+}
