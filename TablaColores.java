@@ -12,6 +12,11 @@
         System.out.println("| \033[36m36m cian      \033[39;49m | \033[96m96m cian claro  \033[39;49m |");
         System.out.println("| \033[37m37m blanco    \033[39;49m | \033[97m97m blanco claro \033[39;49m |");
         System.out.println("+--------+---------------+--------+---------------+");
+    }
+
+    @Override
+    public String toString() {
+        return "TablaColores []";
     }   System.out.println("|  31     \033[31m31m rojo \033[39;49m           |");
         System.out.println("|  91     \033[91m91m rojo claro \033[39;49m     |");
         System.out.println("|  32     \033[32m32m verde \033[39;49m          |");
